@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Arocha Form</title>
+  </head>
+  <body>
+    <div class="board">
+      <div class="title"><span>Student Form</span></div>
+      <div class="container">
+        <form action="submit_form.php" method="post">
+          <!-- Full Name -->
+          <input type="text" name="student_name" placeholder="full name" required />
+          <div class="line1"></div>
+          <!-- Email -->
+          <input type="email" name="student_email" placeholder="email" required />
+          <div class="line2"></div>
+          <!-- gender -->
+          <select name="student_gender" required>
+            <option value="" disabled selected>-- Select Gender --</option>
+            <option value="Male">Male</option>
+            <option value="Male">Female</option>
+          </select>
+          <!-- <input type="text" name="student_gender" placeholder="gender" required> -->
+          <div class="line3"></div>
+          <!-- Age -->
+          <input type="number" name="student_age" placeholder="age" required />
+          <div class="line4"></div>
+          <!-- Course -->
+          <input type="text" name="student_course" placeholder="course" required />
+          <div class="line5"></div>
+          <button type="submit" class="btn1" name="create" value="Submit">submit</button>
+          <div class="res"><a href="./view_students.php">results!</a></div>
+        </form>
+        <div class="pic">
+        <img src="./pen.png" alt="pen">
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
