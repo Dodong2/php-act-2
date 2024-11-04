@@ -35,6 +35,7 @@ if (!$result) {
             <th>Gender</th>
             <th>Age</th>
             <th>Course</th>
+            <th>action</th>
         </tr>
         <?php while ($row = $result->fetch_assoc()): ?>
         <tr>
@@ -44,6 +45,9 @@ if (!$result) {
             <td><?php echo $row['student_gender']; ?></td>
             <td><?php echo $row['student_age']; ?></td>
             <td><?php echo $row['student_course']; ?></td>
+            <td><a href="./update.php?id=<?php echo $row['id']; ?>"><button>edit</button></a>
+            <button>delete</button>
+        </td>
         </tr>
         <?php endwhile; ?>
     </table>
