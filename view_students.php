@@ -46,7 +46,7 @@ if (!$result) {
             <td><?php echo $row['student_age']; ?></td>
             <td><?php echo $row['student_course']; ?></td>
             <td><a href="./update.php?id=<?php echo $row['id']; ?>"><button>edit</button></a>
-            <button>delete</button>
+            <button onclick="confirmDelete(<?php echo $row['id']; ?>)">delete</button>
         </td>
         </tr>
         <?php endwhile; ?>
@@ -58,4 +58,16 @@ if (!$result) {
     <?php $conn->close(); ?>
     </div>
 </body>
+
+        <script>
+            function confirmDelete(id) {
+                const confirmDelete = confirm("Are you sure you want to delete this record?")
+                    window.location.href = './delete.php?id=' + id
+                    if(confirmDelete) {
+                        alert("Deleted Successfully")
+                    }
+                
+            }
+        </script>
+
 </html>
