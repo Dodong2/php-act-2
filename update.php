@@ -97,9 +97,6 @@ if ($res = mysqli_fetch_array($result))
  <td><input type="submit" name="update" value="Update"></td>
  </tr>
  </table>
- <div id="validation">
-    
- </div>
  </form>
 </body>
 
